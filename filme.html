@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meu Player de Filme</title>
+    <style>
+        /* O CSS deixa a página com cara de cinema (fundo escuro e centralizado) */
+        body {
+            background-color: #111;
+            color: white;
+            font-family: sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .tela-cinema {
+            background-color: #222;
+            padding: 20px;
+            border-radius: 15px;
+            box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.8);
+            text-align: center;
+        }
+
+        video {
+            border-radius: 8px;
+            width: 100%;
+            max-width: 800px;
+        }
+
+        h1 {
+            color: #e50914; /* Vermelho estilo Netflix */
+            margin-bottom: 5px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="tela-cinema">
+        <h1>MeuFlix 🍿</h1>
+        <p>Prepare a pipoca!</p>
+
+        <!-- A tag mágica que roda o vídeo. O atributo "controls" adiciona play, pause, volume, etc. -->
+        <video controls>
+            <!-- Link do vídeo. Você pode trocar por um arquivo que esteja no seu PC! -->
+            <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
+            
+            <!-- Mensagem caso o navegador seja muito antigo -->
+            Seu navegador não suporta o player de vídeo.
+        </video>
+    </div>
+
+</body>
+</html>
