@@ -3,9 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Meu Player de Filme</title>
+    <title>Assistindo: Martinho Lutero</title>
     <style>
-        /* O CSS deixa a página com cara de cinema (fundo escuro e centralizado) */
         body {
             background-color: #111;
             color: white;
@@ -26,14 +25,16 @@
             text-align: center;
         }
 
-        video {
+        /* Ajustamos o CSS para o iframe manter a proporção do vídeo */
+        iframe {
             border-radius: 8px;
-            width: 100%;
-            max-width: 800px;
+            width: 800px;
+            height: 450px;
+            max-width: 100%;
         }
 
         h1 {
-            color: #e50914; /* Vermelho estilo Netflix */
+            color: #e50914; 
             margin-bottom: 5px;
         }
     </style>
@@ -41,17 +42,17 @@
 <body>
 
     <div class="tela-cinema">
-        <h1>MeuFlix 🍿</h1>
-        <p>Prepare a pipoca!</p>
+        <h1>Sessão Pipoca 🍿</h1>
+        <p>Assistindo: Martinho Lutero (1953 - Dublado)</p>
 
-        <!-- A tag mágica que roda o vídeo. O atributo "controls" adiciona play, pause, volume, etc. -->
-        <video controls>
-            <!-- Link do vídeo. Você pode trocar por um arquivo que esteja no seu PC! -->
-            <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
-            
-            <!-- Mensagem caso o navegador seja muito antigo -->
-            Seu navegador não suporta o player de vídeo.
-        </video>
+        <!-- A tag iframe conecta o seu site com o servidor do YouTube -->
+        <iframe 
+            src="https://www.youtube.com/embed/faxYAslbfl8" 
+            title="Filme Martinho Lutero"
+            frameborder="0" 
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+            allowfullscreen>
+        </iframe>
     </div>
 
 </body>
